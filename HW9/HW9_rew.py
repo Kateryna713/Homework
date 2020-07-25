@@ -24,12 +24,16 @@ def dice_roll():
         print ("Player 1 total sum = " + str(player1_total))
         print ("Player 2 total sum = " + str(player2_total))
         break
+    get_results(player1_total, player2_total)
+
+
+def get_results(player1_total, player2_total):
     if player1_total > player2_total:
         print('Player 1 win! Congratulations!!!')
     elif player1_total < player2_total:
         print('Player 2 win! Congratulations!!!')
     else:
-        print ('It is a drow! Friendship wins!')
+        print('It is a drow! Friendship wins!')
 
 
 def main():
