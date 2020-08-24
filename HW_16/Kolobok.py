@@ -75,11 +75,11 @@ class Fox(Hero):
 
 class Tale:
 
-    def __init__(self, babka, ded, colobok, fox):
+    def __init__(self, babka, ded, colobok, fox, animals):
         self.babka = babka
         self.ded = ded
         self.colobok = colobok
-        self.animals = A
+        self.animals = animals
         self.fox = fox
 
     def babkin_dom(self):
@@ -112,6 +112,6 @@ Fo = Animal('Fox')
 F = Fox('Fox')
 A = [H, W, Be, Fo]
 
-my_tail = Tale(B, D, C, F)
+my_tail = Tale(B, D, C, F, A)
 my_tail.start()
 
