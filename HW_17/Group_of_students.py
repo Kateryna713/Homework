@@ -15,11 +15,9 @@ class GroupOfStudents:
 
         names = []
 
-        average = self.group_average
-
         for student in self.student_list:
 
-            if student.grades < average:
+            if student.grades < self.group_average:
                 names.append(student)
 
         return names
@@ -41,34 +39,21 @@ class GroupOfStudents:
             if student.grades == max:
                 students.append(student)
 
-        max_dict = {max: students}
-        return max_dict
+        return {max: students}
 
     def max_grade(self):
-
-        max_dict = self.highest_grade
-        for key in max_dict:
+        for key in self.highest_grade:
             print(f'Max grade = {key}')
 
     def students_enrolled_to_budget(self):
         print(f'Best students enrolled to budget are: ')
-        max_dict = self.highest_grade
-        for key in max_dict:
-
-            temp = max_dict[key]
-            # with open('students_enrolled_to_budget.txt', 'w+') as f:
-            #     for name in list(temp):
-            #         f.writelines(f'{name}\n')
-            for name in list(temp):
+        for key in self.highest_grade:
+            for name in list(self.highest_grade[key]):
                 print(f'\t {name}')
 
     def students_dropped_out(self):
         print(f'Students dropped out of the group are: ')
-        students = self.students_below_average
-        # with open('students_dropped_out.txt', 'w+') as f:
-        #     for student in students:
-        #         f.write(f'{student}\n')
-        for student in students:
+        for student in self.students_below_average:
             print(f'\t {student}')
 
 
